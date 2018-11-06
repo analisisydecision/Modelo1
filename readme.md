@@ -1,0 +1,1 @@
+#Creacion de un modelo simple de regresión lineal 
