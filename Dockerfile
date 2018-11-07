@@ -1,24 +1,18 @@
 # Base image https://hub.docker.com/u/rocker/
-FROM rocker/rstudio
+FROM rocker/r-base
 
-## Install extra R packages using requirements.R
-## Specify requirements as R install commands e.g.
-## 
-## install.packages("<myfavouritepacakge>") or
-## devtools::install("SymbolixAU/googleway")
+## En requirements.R puedes especificar los paquetes que necesites
 
-## Copy requirements.R to container directory /tmp
+## El requirements se  guarda en un temporal para posterior ejecución
 COPY ./DockerConfig/requirements.R /tmp/requirements.R 
-## install required libs on container
 RUN Rscript /tmp/requirements.R
 
-# create an R user
+# Creamos el eviroment para RStudio
 ENV USER rstudio
 
-## Copy your working files over
-## The $USER defaults to `rstudio` but you can change this at runtime
-COPY ./Analysis /home/$USER/Analysis
-COPY ./Data /home/$USER/Data
+## Copia de archivos
+## COPY ./Analysis /home/$USER/Analysis
+
 
 
 
