@@ -7,6 +7,7 @@ FROM rocker/r-base
 COPY ./DockerConfig/requirements.R /tmp/requirements.R 
 RUN Rscript /tmp/requirements.R
 
+<<<<<<< HEAD
 # API
 RUN mkdir -p /app/
 WORKDIR /app/
@@ -18,6 +19,14 @@ CMD ["/app/depliegue_modelo.R"]
 #ENV USER rstudio
 
 
+=======
+# Creamos el eviroment para RStudio
+ENV USER rstudio
+
+## Copia de archivos
+## COPY ./Analysis /home/$USER/Analysis
+
+>>>>>>> beb4dcb9876dff54e9e3ef294633aeb30369481f
 
 
 
