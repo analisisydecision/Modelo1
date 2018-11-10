@@ -1,10 +1,8 @@
 # Base image https://hub.docker.com/u/rocker/
 FROM rocker/r-base
-
 # En requirements.R puedes especificar los paquetes que necesites
 COPY ./DockerConfig/requirements.R /tmp/requirements.R 
 RUN Rscript /tmp/requirements.R
-
 # API
 RUN mkdir -p /app/
 WORKDIR /app/
