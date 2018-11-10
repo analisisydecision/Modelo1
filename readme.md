@@ -2,4 +2,4 @@
 ## Llamada con plumber 
 ## Creación de Docker
 
-docker build -t rvaquerizo/modelo1 https://github.com/analisisydecision/Modelo1
+### docker build -t rvaquerizo/modelo1 https://github.com/analisisydecision/Modelo1

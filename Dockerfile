@@ -13,11 +13,3 @@ COPY ./depliegue_modelo1.R /app/
 CMD ["/app/depliegue_modelo.R"]
 
 
-
-
-
-
-
-
-
-
